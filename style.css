@@ -1,0 +1,17 @@
+.alert-text {
+	font-weight: bold;
+	color: red;
+}
+
+.list {
+
+}
+
+.list__price {
+	display: inline-block;
+	margin-left:  10px;
+}
+
+.chart-container {
+	max-width: 500px;
+}

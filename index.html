@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+	<h3>Enter the date for check Bitcoin course</h3>
+	<input type="date" id="date-start">
+	<input type="date" id="date-end">
+	<button id="submit-button">get course</button>
+
+	<ul id="date-list" class="list"></ul>
+
+	<div class="chart-container">
+		<canvas id="myChart" width="400" height="400"></canvas>
+	</div>
+	
+
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="libs/Chart.bundle.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>

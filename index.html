@@ -9,16 +9,27 @@
 </head>
 <body>
 
-	<h3>Enter the date for check Bitcoin course</h3>
-	<input type="date" id="date-start">
-	<input type="date" id="date-end">
-	<button id="submit-button">get course</button>
+	<main>
+		<div class="container">
+			
 
-	<ul id="date-list" class="list"></ul>
+			<div id="date-form" class="date-form">
+				<h3>Enter the date for check Bitcoin course</h3>
+				<input type="date" id="date-start" class="input">
+				<input type="date" id="date-end" class="input">
+				<button id="submit-button" class="button">get course</button>
+			</div>
+			
 
-	<div class="chart-container">
-		<canvas id="myChart" width="400" height="400"></canvas>
-	</div>
+			<ul id="date-list" class="list hide"></ul>
+
+			<div class="chart-container">
+				<canvas id="myChart" width="400" height="400"></canvas>
+			</div>
+		</div>		
+	</main>
+
+	
 	
 
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>

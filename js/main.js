@@ -5,6 +5,7 @@ $(document).ready(function() {
 
 	function sendRequest() {
 		var dateList = $("#date-list");
+		var dateForm = $('#date-form');
 		var inputStartDate = $("#date-start");
 		var inputEndDate = $("#date-end");
 		var submitButton = $("#submit-button");
@@ -27,7 +28,7 @@ $(document).ready(function() {
 			e.preventDefault();
 
 			if (!startDate || !endDate) {
-				dateList.after(alertMessage);
+				dateForm.append(alertMessage);
 				return;
 			}
 
@@ -52,6 +53,7 @@ $(document).ready(function() {
 					var courseValues = []; // array for the course price value
 
 					for (var value in list) {
+						dateList.removeClass('hide');
 						dateList.append('<li class="list__item">' + value + ':<strong class="list__price">' + list[value] + ' $</strong></li>');
 						datesArray.push(value);
 						courseValues.push(list[value]);
@@ -60,6 +62,8 @@ $(document).ready(function() {
 					console.log(datesArray);
 					console.log(courseValues);
 
+
+					// Create chart with data from coindesk
 					var ctx = document.getElementById('myChart').getContext('2d');
 					var chart = new Chart(ctx, {
 						// The type of chart we want to create
